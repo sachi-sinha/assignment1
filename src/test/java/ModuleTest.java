@@ -2,8 +2,6 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class ModuleTest {
     private final List<String> studentList = List.of("A", "B", "C", "D");
     private final List<String> courseList = List.of("ECE", "IT", "BIS");

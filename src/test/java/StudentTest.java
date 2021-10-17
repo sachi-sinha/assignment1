@@ -1,7 +1,10 @@
 import org.joda.time.DateTime;
 import org.junit.jupiter.api.Test;
+
 import java.util.List;
-import static org.junit.jupiter.api.Assertions.assertFalse;
+
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNotSame;
 
 class StudentTest {
     private final List<String> courseList = List.of("ECE", "IT", "BIS", "BA", "CSE");
@@ -45,6 +48,11 @@ class StudentTest {
 
     @Test
     public void testGetStudentUserNameFail(){
-        assertFalse(student.getUserName() == ("ABC" + 21));
+        assertNotSame(("ABC" + 21), student.getUserName());
+    }
+
+    @Test
+    public void testGetStudentId(){
+        assertNotNull(student.getId());
     }
 }

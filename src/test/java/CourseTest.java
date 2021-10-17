@@ -3,8 +3,6 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class CourseTest {
     private final List<String> moduleList = List.of("CT1100", "CT1101", "CT2020");
     private final List<String> studentList = List.of("U", "V", "W", "X");
@@ -30,8 +28,8 @@ class CourseTest {
 
     @Test
     void testSetStartDate() {
-        course.setEndDate(DateTime.parse("2022-01-01"));
-        assert(course.getEndDate()).equals(DateTime.parse("2022-01-01"));
+        course.setStartDate(DateTime.parse("2022-01-01"));
+        assert(course.getStartDate()).equals(DateTime.parse("2022-01-01"));
     }
 
     @Test
