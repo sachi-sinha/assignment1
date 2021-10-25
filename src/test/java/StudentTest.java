@@ -1,15 +1,11 @@
 import org.joda.time.DateTime;
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNotSame;
 
 class StudentTest {
-    private final List<String> courseList = List.of("ECE", "IT", "BIS", "BA", "CSE");
-    private final List<String> moduleList = List.of("CT212", "MA1111", "EE2101", "MA2343");
-    private final Student student = new Student("ABC", 22, DateTime.parse("2000-05-26"), courseList, moduleList);
+    private final Student student = new Student("ABC", 22, DateTime.parse("2000-05-26"));
 
     @Test
     public void testSetName(){
@@ -27,18 +23,6 @@ class StudentTest {
     public void testDateofBirth(){
         student.setDateOfBirth(DateTime.parse("2000-01-01"));
         assert(student.getDateOfBirth()).equals(DateTime.parse("2000-01-01"));
-    }
-
-    @Test
-    public void testSetCourseList(){
-        student.setCourseList(List.of("ECE", "IT"));
-        assert(student.getCourseList()).equals(List.of("ECE", "IT"));
-    }
-
-    @Test
-    public void testSetModuleList(){
-        student.setModuleList(List.of("CT2133", "MA2100", "EE4202"));
-        assert(student.getModuleList()).equals(List.of("CT2133", "MA2100", "EE4202"));
     }
 
     @Test

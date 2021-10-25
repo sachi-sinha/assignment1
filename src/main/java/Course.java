@@ -4,15 +4,13 @@ import java.util.List;
 
 public class Course {
     private String name;
-    private List<String> moduleList;
-    private List<String> studentList;
+    private List<Module> moduleList;
     private DateTime startDate;
     private DateTime endDate;
 
-    public Course(String name, List<String> moduleList, List<String> studentList, DateTime startDate, DateTime endDate) {
+    public Course(String name, List<Module> moduleList, DateTime startDate, DateTime endDate) {
         this.name = name;
         this.moduleList = moduleList;
-        this.studentList = studentList;
         this.startDate = startDate;
         this.endDate = endDate;
     }
@@ -25,20 +23,12 @@ public class Course {
         this.name = name;
     }
 
-    public List<String> getModuleList() {
+    public List<Module> getModuleList() {
         return moduleList;
     }
 
-    public void setModuleList(List<String> moduleList) {
+    public void setModuleList(List<Module> moduleList) {
         this.moduleList = moduleList;
-    }
-
-    public List<String> getStudentList() {
-        return studentList;
-    }
-
-    public void setStudentList(List<String> studentList) {
-        this.studentList = studentList;
     }
 
     public DateTime getStartDate() {

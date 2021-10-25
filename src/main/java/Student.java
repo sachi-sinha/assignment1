@@ -9,16 +9,11 @@ public class Student {
     private String name;
     private int age;
     private DateTime dateOfBirth;
-    private List<String> courseList;
-    private List<String> moduleList;
 
-    public Student(String name, int age, DateTime dateOfBirth,
-                   List<String> courseList, List<String> moduleList){
+    public Student(String name, int age, DateTime dateOfBirth){
         this.name = name;
         this.age = age;
         this.dateOfBirth = dateOfBirth;
-        this.courseList = courseList;
-        this.moduleList = moduleList;
     }
 
     public void setName(String name) {
@@ -33,14 +28,6 @@ public class Student {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public void setCourseList(List<String> courseList) {
-        this.courseList = courseList;
-    }
-
-    public void setModuleList(List<String> moduleList) {
-        this.moduleList = moduleList;
-    }
-
     public String getName() {
         return name;
     }
@@ -51,14 +38,6 @@ public class Student {
 
     public DateTime getDateOfBirth() {
         return dateOfBirth;
-    }
-
-    public List<String> getCourseList() {
-        return courseList;
-    }
-
-    public List<String> getModuleList() {
-        return moduleList;
     }
 
     public String getUserName(){

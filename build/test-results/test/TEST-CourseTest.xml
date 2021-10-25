@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CourseTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-10-25T19:17:51" hostname="LAPTOP-3A3NSRVT" time="0.034">
+  <properties/>
+  <testcase name="testSetStartDate()" classname="CourseTest" time="0.024"/>
+  <testcase name="testSetEndDate()" classname="CourseTest" time="0.002"/>
+  <testcase name="testSetModuleList()" classname="CourseTest" time="0.001"/>
+  <testcase name="testSetName()" classname="CourseTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

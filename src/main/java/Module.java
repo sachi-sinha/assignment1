@@ -3,14 +3,12 @@ import java.util.List;
 public class Module {
     private String name;
     private String id;
-    private List<String> studentList;
-    private List<String> courseList;
+    private List<Student> studentList;
 
-    public Module(String name, String id, List<String> studentList, List<String> courseList) {
+    public Module(String name, String id, List<Student> studentList) {
         this.name = name;
         this.id = id;
         this.studentList = studentList;
-        this.courseList = courseList;
     }
 
     public String getName() {
@@ -29,19 +27,11 @@ public class Module {
         this.id = id;
     }
 
-    public List<String> getStudentList() {
+    public List<Student> getStudentList() {
         return studentList;
     }
 
-    public void setStudentList(List<String> studentList) {
+    public void setStudentList(List<Student> studentList) {
         this.studentList = studentList;
-    }
-
-    public void setCourseList(List<String> courseList) {
-        this.courseList = courseList;
-    }
-
-    public List<String> getCourseList() {
-        return courseList;
     }
 }
