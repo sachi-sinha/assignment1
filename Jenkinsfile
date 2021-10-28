@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                echo 'Testing..'
+                build wait: false, job: 'assignment1'
             }
         }
     }
