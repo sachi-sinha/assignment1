@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        docker { image 'jenkins-blueocean' }
-    }
+    agent any 
     stages {
         stage('Test') {
             steps {
