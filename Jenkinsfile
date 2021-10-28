@@ -1,9 +1,11 @@
 pipeline {
-    agent any 
+    agent {
+        docker { image 'node:jenkins-agent' }
+    }
     stages {
         stage('Test') {
             steps {
-                build wait: false, job: 'assignment1'
+                sh 'node --version'
             }
         }
     }
