@@ -3,9 +3,9 @@ pipeline {
         docker { image 'node:jenkins-agent' }
     }
     stages {
-        stage('Test') {
+        stage('Build') {
             steps {
-                sh 'node --version'
+               sh './gradlew clean build'
             }
         }
     }
