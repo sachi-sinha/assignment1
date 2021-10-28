@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        docker { image 'node:jenkins-agent' }
-    }
+    agent any
     stages {
         stage('Build') {
             steps {
