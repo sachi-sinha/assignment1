@@ -11,7 +11,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'joda-time:joda-time:2.10.12'
+    implementation 'org.terasoluna.gfw:terasoluna-gfw-jodatime-dependencies:5.7.0.RELEASE'
     implementation 'junit:junit:4.13.2'
     implementation 'org.mockito:mockito-all:1.10.19'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
