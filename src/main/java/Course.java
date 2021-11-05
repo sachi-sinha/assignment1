@@ -3,10 +3,10 @@ import org.joda.time.DateTime;
 import java.util.List;
 
 public class Course {
-    private String name;
-    private List<Module> moduleList;
-    private DateTime startDate;
-    private DateTime endDate;
+    private String name; // name of the course
+    private List<Module> moduleList; // modules in the course
+    private DateTime startDate; // course start date
+    private DateTime endDate; // course end date
 
     public Course(String name, List<Module> moduleList, DateTime startDate, DateTime endDate) {
         this.name = name;
@@ -19,7 +19,11 @@ public class Course {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name) throws Exception {
+        // name can't be an empty string
+        if(name.equals("")){
+            throw new Exception("Null values not accepted");
+        }
         this.name = name;
     }
 
@@ -27,7 +31,11 @@ public class Course {
         return moduleList;
     }
 
-    public void setModuleList(List<Module> moduleList) {
+    public void setModuleList(List<Module> moduleList) throws Exception {
+        // module list can't be empty for a course
+        if (moduleList.size() == 0){
+            throw new Exception("Module list can't be 0");
+        }
         this.moduleList = moduleList;
     }
 

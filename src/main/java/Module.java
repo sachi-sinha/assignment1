@@ -1,9 +1,9 @@
 import java.util.List;
 
 public class Module {
-    private String name;
-    private String id;
-    private List<Student> studentList;
+    private String name; // name of module
+    private String id; // id of module
+    private List<Student> studentList; // students registered in the module
 
     public Module(String name, String id, List<Student> studentList) {
         this.name = name;
@@ -15,7 +15,11 @@ public class Module {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name) throws Exception {
+        // module name can't be an empty string
+        if(name.equals("")){
+            throw new Exception("Null values not accepted");
+        }
         this.name = name;
     }
 
@@ -23,7 +27,11 @@ public class Module {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(String id) throws Exception {
+        // module id can't be an empty string
+        if (id.equals("")){
+            throw new Exception("Id can't be null");
+        }
         this.id = id;
     }
 
